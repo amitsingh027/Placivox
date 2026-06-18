@@ -17,6 +17,11 @@ export default function Login() {
           placeholder="Password"
           className="w-full p-3 rounded bg-slate-800 text-white mb-4"
         />
+        <input
+        type="Mobile number"
+        placeholder="Mobile number"
+        className="w-full p-3 rounded bg-slate-800 text-white mb-4"
+        />
 
         <button className="w-full bg-blue-600 py-3 rounded text-white">
           Login
