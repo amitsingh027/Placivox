@@ -18,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        
         <Route path="/resume-builder" element={<ResumeBuilder />} />
 <Route path="/ats-scanner" element={<ATSScanner />} />
 <Route path="/interview-prep" element={<InterviewPrep />} />
