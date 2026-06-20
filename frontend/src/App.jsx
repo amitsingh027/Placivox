@@ -9,7 +9,6 @@ import ATSScanner from "./pages/ATSScanner/ATSScanner";
 import InterviewPrep from "./pages/InterviewPrep/InterviewPrep";
 import JobTracker from "./pages/JobTraker/JobTracker";
 
-
 function App() {
   return (
     <BrowserRouter>
