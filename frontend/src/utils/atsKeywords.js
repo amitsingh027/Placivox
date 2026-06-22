@@ -1,0 +1,17 @@
+export const keywords = [
+  "react",
+  "javascript",
+  "typescript",
+  "node",
+  "express",
+  "mongodb",
+  "sql",
+  "git",
+  "github",
+  "api",
+  "docker",
+  "aws",
+  "dsa",
+  "html",
+  "css",
+];

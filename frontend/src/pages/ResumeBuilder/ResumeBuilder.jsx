@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../../components/Sidebar";
+import jsPDF from "jspdf";
 
 export default function ResumeBuilder() {
   const [resume, setResume] = useState({
@@ -12,11 +13,56 @@ export default function ResumeBuilder() {
     experience: "",
   });
 
+  // Load saved resume
+  useEffect(() => {
+    const savedResume = localStorage.getItem("resume");
+
+    if (savedResume) {
+      setResume(JSON.parse(savedResume));
+    }
+  }, []);
+
   const handleChange = (e) => {
     setResume({
       ...resume,
       [e.target.name]: e.target.value,
     });
+  };
+
+  // Save Resume
+  const saveResume = () => {
+    localStorage.setItem(
+      "resume",
+      JSON.stringify(resume)
+    );
+
+    alert("Resume Saved Successfully!");
+  };
+
+  // Download PDF
+  const downloadPDF = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(20);
+    doc.text(resume.fullName || "Your Name", 20, 20);
+
+    doc.setFontSize(12);
+    doc.text(`Email: ${resume.email}`, 20, 35);
+    doc.text(`Phone: ${resume.phone}`, 20, 45);
+
+    doc.text("Education:", 20, 65);
+    doc.text(resume.education || "-", 20, 75);
+
+    doc.text("Skills:", 20, 100);
+    doc.text(resume.skills || "-", 20, 110);
+
+    doc.text("Projects:", 20, 135);
+    doc.text(resume.projects || "-", 20, 145);
+
+    doc.text("Experience:", 20, 170);
+    doc.text(resume.experience || "-", 20, 180);
+
+    doc.save("Resume.pdf");
   };
 
   return (
@@ -102,6 +148,22 @@ export default function ResumeBuilder() {
                 className="w-full p-3 rounded bg-slate-800"
               />
 
+              <div className="flex gap-4 pt-4">
+                <button
+                  onClick={saveResume}
+                  className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg"
+                >
+                  Save Resume
+                </button>
+
+                <button
+                  onClick={downloadPDF}
+                  className="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg"
+                >
+                  Download PDF
+                </button>
+              </div>
+
             </div>
           </div>
 
@@ -138,7 +200,6 @@ export default function ResumeBuilder() {
             <p>{resume.experience}</p>
 
           </div>
-
         </div>
       </div>
     </div>
