@@ -48,28 +48,21 @@ export default function ATSScanner() {
     const missingKeywords = keywords.filter(
       (k) => !lowerText.includes(k)
     );
-
     const atsScore = Math.round(
       (foundKeywords.length / keywords.length) * 100
     );
-
     setScore(atsScore);
     setFound(foundKeywords);
     setMissing(missingKeywords);
   };
-
   return (
     <div className="flex bg-slate-950 min-h-screen text-white">
       <Sidebar />
-
       <div className="flex-1 p-8">
-
         <h1 className="text-4xl font-bold mb-8">
           ATS Scanner 🔍
         </h1>
-
         <div className="bg-slate-900 p-8 rounded-xl">
-
           <input
             type="file"
             accept=".pdf"
@@ -84,7 +77,7 @@ export default function ATSScanner() {
               Uploaded: {fileName}
             </p>
           )}
-
+ 
           {score !== null && (
             <>
               <div className="text-6xl font-bold text-green-400 mb-8">

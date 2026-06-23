@@ -57,7 +57,6 @@ app.post(
           keywords.length) *
           100
       );
-
       res.json({
         score,
         found,
@@ -72,7 +71,6 @@ app.post(
     }
   }
 );
-
 app.listen(5000, () => {
   console.log(
     "Server running on port 5000"
