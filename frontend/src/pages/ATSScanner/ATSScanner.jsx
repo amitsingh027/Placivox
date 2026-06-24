@@ -95,6 +95,7 @@ export default function ATSScanner() {
                     className="bg-green-600 px-3 py-2 rounded"
                   >
                     {item}
+                    
                   </span>
                 ))}
               </div>
