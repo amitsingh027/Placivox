@@ -71,7 +71,6 @@ export default function ATSScanner() {
             }
             className="mb-6"
           />
-
           {fileName && (
             <p className="mb-6">
               Uploaded: {fileName}
@@ -98,8 +97,7 @@ export default function ATSScanner() {
                     
                   </span>
                 ))}
-              </div>
-
+              </div> 
               <h2 className="text-2xl font-semibold mb-4">
                 Missing Keywords
               </h2>
