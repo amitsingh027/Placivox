@@ -43,8 +43,7 @@ export default function ATSScanner() {
 
     const foundKeywords = keywords.filter((k) =>
       lowerText.includes(k)
-    );
-
+    );https://redash.locofly.in/dashboards/2-locofly-store-operator?p_w15_store_id=1008&p_w15_supplier_id=1&p_w16_po_id=71&p_w19_barcodes=800001&p_w25_limit_n=100&p_w36_search_terms=atta%2Calmond%2Ckishmish%2Csugar&p_w55_product_ids=1000022330&p_w56_store_id=1008&p_w56_zone_codes=z3
     const missingKeywords = keywords.filter(
       (k) => !lowerText.includes(k)
     );
@@ -94,7 +93,6 @@ export default function ATSScanner() {
                     className="bg-green-600 px-3 py-2 rounded"
                   >
                     {item}
-                    
                   </span>
                 ))}
               </div> 
