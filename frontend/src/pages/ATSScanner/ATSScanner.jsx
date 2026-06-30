@@ -11,6 +11,7 @@ export default function ATSScanner() {
   const [score, setScore] = useState(null);
   const [missing, setMissing] = useState([]);
   const [found, setFound] = useState([]);
+  
   const [fileName, setFileName] = useState("");
   const [selectedRole, setSelectedRole] =useState("frontend");
 
