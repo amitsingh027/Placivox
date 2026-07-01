@@ -48,6 +48,7 @@ export default function ATSScanner() {
     const missingKeywords = keywords.filter(
       (k) => !lowerText.includes(k)
     );
+    
     const atsScore = Math.round(
       (foundKeywords.length / keywords.length) * 100
     );
