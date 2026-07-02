@@ -52,6 +52,7 @@ export default function ATSScanner() {
     const atsScore = Math.round(
       (foundKeywords.length / keywords.length) * 100
     );
+    
     setScore(atsScore);
     setFound(foundKeywords);
     setMissing(missingKeywords);
