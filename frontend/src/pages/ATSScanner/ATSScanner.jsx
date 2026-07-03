@@ -66,6 +66,7 @@ export default function ATSScanner() {
         </h1>
         <div className="bg-slate-900 p-8 rounded-xl">
           <input
+          
             type="file"
             accept=".pdf"
             onChange={(e) =>
