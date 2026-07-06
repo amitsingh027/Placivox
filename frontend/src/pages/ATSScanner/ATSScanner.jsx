@@ -107,6 +107,7 @@ export default function ATSScanner() {
               <div className="flex flex-wrap gap-3">
                 {missing.map((item) => (
                   <span
+                  
                     key={item}
                     className="bg-red-600 px-3 py-2 rounded"
                   >
