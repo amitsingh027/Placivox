@@ -81,6 +81,7 @@ export default function ATSScanner() {
           )}
           {score !== null && (
             <>
+            
               <div className="text-6xl font-bold text-green-400 mb-8">
                 {score}%
               </div>
