@@ -5,7 +5,6 @@ export default function Register() {
         <h2 className="text-white text-3xl font-bold mb-6">
           Register
         </h2>
-
         <input
           type="text"
           placeholder="Name"
