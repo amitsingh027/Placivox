@@ -10,7 +10,6 @@ export default function Register() {
           placeholder="Name"
           className="w-full p-3 rounded bg-slate-800 text-white mb-4"
         />
-
         <input
           type="email"
           placeholder="Email"
