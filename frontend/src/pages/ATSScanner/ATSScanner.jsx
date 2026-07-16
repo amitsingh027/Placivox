@@ -52,7 +52,6 @@ export default function ATSScanner() {
     const atsScore = Math.round(
       (foundKeywords.length / keywords.length) * 100
     );
-    
     setScore(atsScore);
     setFound(foundKeywords);
     setMissing(missingKeywords);
@@ -64,6 +63,7 @@ export default function ATSScanner() {
         <h1 className="text-4xl font-bold mb-8">
           ATS Scanner 🔍
         </h1>
+        
         <div className="bg-slate-900 p-8 rounded-xl">
           <input
           
