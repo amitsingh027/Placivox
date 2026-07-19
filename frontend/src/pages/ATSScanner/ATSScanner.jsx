@@ -56,6 +56,7 @@ export default function ATSScanner() {
     setFound(foundKeywords);
     setMissing(missingKeywords);
   };
+  
   return (
     <div className="flex bg-slate-950 min-h-screen text-white">
       <Sidebar />
