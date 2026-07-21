@@ -21,7 +21,6 @@ export const jobRoles = {
     "api",
     "git",
   ],
-
   java: [
     "java",
     "spring",
