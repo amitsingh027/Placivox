@@ -35,10 +35,9 @@ export default function ATSScanner() {
         .map((item) => item.str)
         .join(" ");
     }
-
     analyzeResume(text);
   };
-
+  
   const analyzeResume = (text) => {
     const lowerText = text.toLowerCase();
 
